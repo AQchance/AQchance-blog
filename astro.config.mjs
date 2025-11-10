@@ -26,7 +26,7 @@ import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-cop
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://AQchance.github.io",
+  site: "https://AQchance.github.io/",
 	base: "/AQchance-blog",
 	trailingSlash: "always",
 	integrations: [
