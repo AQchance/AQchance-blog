@@ -23,9 +23,9 @@ lang: ''
 
 - 基本数据类型之间的转换：（这里应该考虑到不同类型之间的转换可能会导致精度的损失，应该仔细考虑是否需要转换）
 ```cpp
-  int int_number = 42;
-  float float_number = static_cast<float>(int_number);
-  double double_number = static_cast<double>(int_number);
+int int_number = 42;
+float float_number = static_cast<float>(int_number);
+double double_number = static_cast<double>(int_number);
 ```
 
 - 指针或引用类型之间的转换：
@@ -115,12 +115,23 @@ int main() {
 当我们试图访问调用一个虚函数时，编译器会通过`vptr`访问`vtable`，然后根据函数的偏移量找到对应的函数地址并进行调用。
 
 - 其次，`vtable`的第一个条目通常是一个指向类型信息(`type_info`)的指针，这个信息用于在运行时识别对象的实际类型。
+import std;
+
+
+另外，需要说明`dynamic_cast`只有在开启了运行时类型信息(RTTI)的情况下才能工作。RTTI允许程序在运行时获取对象的类型信息，这对于动态类型检查是必不可少的。
+对于g++编译器，可以通过编译选项`-frtti`来启用RTTI（默认情况下是启用的）。如果禁用了RTTI，`dynamic_cast`将无法进行类型检查，可能会导致编译错误或运行时错误。
 
 `type_info`的结构大致如下所示：
 > |      **type_info for Derived** |
 > |:-------------------:|
 > | "Derived" (class name) |
 当我们使用`dynamic_cast`进行类型转换时，编译器会通过`vptr`访问`vtable`，然后检查第一个条目中的`type_info`，以确定对象的实际类型。如果类型匹配，转换成功；否则，返回`nullptr`。
+
+>**另外**，需要说明`dynamic_cast`只有在开启了运行时类型信息(RTTI)的情况下才能工作。RTTI允许程序在运行时获取对象的类型信息，这对于动态类型检查是必不可少的。
+>对于g++编译器，可以通过编译选项`-frtti`来启用RTTI（默认情况下是启用的）。如果禁用了RTTI，`dynamic_cast`将无法进行类型检查，可能会导致编译错误或运行时错误。禁用RTTI可以使用`-fno-rtti`选项。
+>对于上边的示例代码，禁用之后编译如下所示：
+
+![禁用RTTI编译错误](4.png)
 
 > ### 常量转换(const_cast)
 
