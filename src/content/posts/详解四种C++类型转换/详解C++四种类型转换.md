@@ -118,7 +118,6 @@ int main() {
 当我们试图访问调用一个虚函数时，编译器会通过`vptr`访问`vtable`，然后根据函数的偏移量找到对应的函数地址并进行调用。
 
 - 其次，`vtable`的第一个条目通常是一个指向类型信息(`type_info`)的指针，这个信息用于在运行时识别对象的实际类型。
-import std;
 
 `type_info`的结构大致如下所示：
 > |      **type_info for Derived** |
