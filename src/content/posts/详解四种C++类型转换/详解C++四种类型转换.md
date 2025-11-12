@@ -2,12 +2,15 @@
 title: 详解C++四种类型转换
 published: 2025-11-11
 description: '本文主要介绍C++的四种类型转换'
-image: ''
+image: './5.png'
 tags: ['C++', '编程语言']
 category: '技术'
 draft: false 
 lang: ''
 ---
+
+> [图片来源](https://www.pixiv.net/artworks/127735697)
+> [画师主页](https://www.pixiv.net/users/96367956)
 
 > ## C++的四种类型转换
 
