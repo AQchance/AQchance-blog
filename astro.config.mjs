@@ -65,6 +65,7 @@ export default defineConfig({
 			],
 			defaultProps: {
 				wrap: true,
+				frame: "terminal",
 				overridesByLang: {
 					'shellsession': {
 						showLineNumbers: false,
@@ -82,6 +83,7 @@ export default defineConfig({
 					editorBackground: "var(--codeblock-bg)",
 					terminalBackground: "var(--codeblock-bg)",
 					terminalTitlebarBackground: "var(--codeblock-topbar-bg)",
+					terminalTitlebarDotsForeground: "oklch(0.75 0.15 0)",
 					editorTabBarBackground: "var(--codeblock-topbar-bg)",
 					editorActiveTabBackground: "none",
 					editorActiveTabIndicatorBottomColor: "var(--primary)",

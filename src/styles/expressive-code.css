@@ -6,4 +6,22 @@
     .title {
         font-family: "Maple Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
+
+    /* macOS 风格红黄绿三色圆点 */
+    .header::before {
+        background: linear-gradient(
+            to right,
+            #ff5f56 0%, #ff5f56 28%,
+            transparent 28%, transparent 36%,
+            #ffbd2e 36%, #ffbd2e 64%,
+            transparent 64%, transparent 72%,
+            #27c93f 72%, #27c93f 100%
+        ) !important;
+        opacity: 1 !important;
+    }
+
+    /* 隐藏原有的单色圆点 */
+    .header::after {
+        display: none !important;
+    }
 }
