@@ -23,6 +23,7 @@ void f(const T&)
 int main()
 {
     int x = 10;
+    f(x); // T被推导为int
     const auto& cx = x;
 }
 ```
