@@ -293,13 +293,6 @@ function M.open()
 end
 ```
 
-## 功能展示
+## 本插件的文档
 
-<div align="center">
-  <video src="https://github.com/user-attachments/assets/57cfd08f-cba1-4895-be12-0928044aa1a5" 
-         controls 
-         width="100%" 
-         style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-  </video>
-</div>
-
+本插件的完整代码和使用文档(含演示视频)可以参考GitHub仓库：[AQchance/flash-zh-simple.nvim](https://github.com/AQchance/flash-zh-simple.nvim)
