@@ -3,8 +3,8 @@ title: 何意百炼刚，化为绕指柔
 published: 2026-01-11
 description: '近期读的一些历史'
 image: ''
-tags: ['生活']
-category: '杂谈'
+tags: ['历史']
+category: '历史'
 draft: false
 lang: ''
 ---
